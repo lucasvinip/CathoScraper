@@ -1,6 +1,6 @@
 import { Chicken } from "./chicken";
 
-console.log('hi');
+console.log('');
 
 const chicken = new Chicken();
 chicken.cluck();
