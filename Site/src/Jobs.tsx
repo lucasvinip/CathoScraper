@@ -2,9 +2,37 @@ import './css/Reset.css'
 import './css/Header.css'
 import './css/Main/JobSearch.css'
 import './css/Main/Jobs.css'
+import { useEffect, useState } from 'react'
+
+interface Job {
+    id: number,
+    positionOfJob: string,
+    company: string
+    salary: string,
+    numbersOfVacancy: string,
+    locationOfCompany: string,
+    dayPosted: string,
+    descriptionOfJob: string
+}
 
 
 function Jobs() {
+    const [jobs, setJobs] = useState<Job[]>([])
+    const [sentApplication, setSentAplication] = useState <number[]>([]);
+
+    useEffect(() => {
+        const getVacancy = async () => {
+            const response = await fetch('./public/data.json');
+            const data: Job [] = await response.json();
+            setJobs(data);
+        }
+
+        getVacancy();   
+    }, [])
+
+    console.log(Jobs);
+    
+
     return (
         <>
             <header>
@@ -20,7 +48,7 @@ function Jobs() {
                                         Anunciar vagas
                                     </span>
                                 </button>
-                                <button className='button2'>
+                                <button className='button2' onClick={() => alert('ola')}>
                                     <span>
                                         Cadastrar CV grátis
                                     </span>
@@ -140,393 +168,60 @@ function Jobs() {
                             </div>
                             <div className='contentSecond'>
                                 <div className='second'>
-                                    <div className='box-jobs'>
-                                        <div className='aboutJobs'>
+                                    {jobs.map((job) => (
+                                        <div className='box-jobs'>
+                                        <div className='aboutJobs' key={job.id}>
                                             <div className='title'>
-                                                <h1>ANALISTA DE GROWTH SENIOR</h1>
-                                                <h2 style={{color: 'rgb(89, 89, 89)'}}>PROMPT</h2>
+                                                <h1>{job.positionOfJob.toUpperCase()}</h1>
+                                                <h2 style={{ color: 'rgb(89, 89, 89)' }}>{job.company.toUpperCase()}</h2>
                                             </div>
                                             <div className='moreAbout'>
                                                 <div>
-                                                    <span>De R$ 9.001,00 a R$ 10.000,00</span>
-                                                    <span style={{fontWeight: 'bold'}}>
-                                                        1 vaga: {' '}
-                                                        <span style={{fontWeight: 'normal'}}>
-                                                            São Paulo - SP (1)
+                                                    <span>{job.salary}</span>
+                                                    <span style={{ fontWeight: 'bold' }}>
+                                                        {job.numbersOfVacancy} {' '}
+                                                        <span style={{ fontWeight: 'normal' }}>
+                                                            {job.locationOfCompany}
                                                         </span>
                                                     </span>
-                                                    <span style={{fontSize: '.9rem'}}>Publicada hoje</span>
+                                                    <span style={{ fontSize: '.9rem' }}>{job.dayPosted}</span>
                                                 </div>
                                             </div>
                                             <div className='description'>
-                                                <p style={{}}>Realizar cotações, negociações e processos de compra com fornecedores de embalagens,
-                                                    materiais operacionais e serviços logísticos;
-                                                    Gerar e acompanhar pedidos de compra (até a…
-                                                </p>
+                                                <p>{job.descriptionOfJob}</p>
                                                 <span style={{
-                                                    color: 'rgb(37, 87, 167)', 
-                                                    fontWeight: 'bold', fontSize: '.9rem', cursor: 'pointer'}}>
+                                                    color: 'rgb(37, 87, 167)',
+                                                    fontWeight: 'bold', fontSize: '.9rem', cursor: 'pointer'
+                                                }}>
                                                     continuar lendo
                                                 </span>
                                             </div>
                                             <div className='sendApplication'>
-                                                <button>
-                                                    <span>
-                                                        Enviar Candidatura Fácil
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='box-jobs'>
-                                        <div className='aboutJobs'>
-                                            <div className='title'>
-                                                <h1>ANALISTA DE GROWTH SENIOR</h1>
-                                                <h2 style={{color: 'rgb(89, 89, 89)'}}>PROMPT</h2>
-                                            </div>
-                                            <div className='moreAbout'>
-                                                <div>
-                                                    <span>De R$ 9.001,00 a R$ 10.000,00</span>
-                                                    <span style={{fontWeight: 'bold'}}>
-                                                        1 vaga: {' '}
-                                                        <span style={{fontWeight: 'normal'}}>
-                                                            São Paulo - SP (1)
+                                                {!sentApplication.includes(job.id) ? (
+                                                    <button onClick={() => setSentAplication([...sentApplication, job.id])}>
+                                                        <span>
+                                                            Enviar Candidatura Fácil
                                                         </span>
-                                                    </span>
-                                                    <span style={{fontSize: '.9rem'}}>Publicada hoje</span>
-                                                </div>
-                                            </div>
-                                            <div className='description'>
-                                                <p style={{}}>Realizar cotações, negociações e processos de compra com fornecedores de embalagens,
-                                                    materiais operacionais e serviços logísticos;
-                                                    Gerar e acompanhar pedidos de compra (até a…
-                                                </p>
-                                                <span style={{
-                                                    color: 'rgb(37, 87, 167)', 
-                                                    fontWeight: 'bold', fontSize: '.9rem', cursor: 'pointer'}}>
-                                                    continuar lendo
-                                                </span>
-                                            </div>
-                                            <div className='sendApplication'>
-                                                <button>
-                                                    <span>
-                                                        Enviar Candidatura Fácil
-                                                    </span>
-                                                </button>
+                                                    </button>
+                                                )
+                                                    :
+                                                    <span style={{
+                                                        color: 'green',
+                                                        fontWeight: 'bold'
+                                                    }}>
+                                                        Currículo já enviado! </span>
+                                                }
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='box-jobs'>
-                                        <div className='aboutJobs'>
-                                            <div className='title'>
-                                                <h1>ANALISTA DE GROWTH SENIOR</h1>
-                                                <h2 style={{color: 'rgb(89, 89, 89)'}}>PROMPT</h2>
-                                            </div>
-                                            <div className='moreAbout'>
-                                                <div>
-                                                    <span>De R$ 9.001,00 a R$ 10.000,00</span>
-                                                    <span style={{fontWeight: 'bold'}}>
-                                                        1 vaga: {' '}
-                                                        <span style={{fontWeight: 'normal'}}>
-                                                            São Paulo - SP (1)
-                                                        </span>
-                                                    </span>
-                                                    <span style={{fontSize: '.9rem'}}>Publicada hoje</span>
-                                                </div>
-                                            </div>
-                                            <div className='description'>
-                                                <p style={{}}>Realizar cotações, negociações e processos de compra com fornecedores de embalagens,
-                                                    materiais operacionais e serviços logísticos;
-                                                    Gerar e acompanhar pedidos de compra (até a…
-                                                </p>
-                                                <span style={{
-                                                    color: 'rgb(37, 87, 167)', 
-                                                    fontWeight: 'bold', fontSize: '.9rem', cursor: 'pointer'}}>
-                                                    continuar lendo
-                                                </span>
-                                            </div>
-                                            <div className='sendApplication'>
-                                                <button>
-                                                    <span>
-                                                        Enviar Candidatura Fácil
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='box-jobs'>
-                                        <div className='aboutJobs'>
-                                            <div className='title'>
-                                                <h1>ANALISTA DE GROWTH SENIOR</h1>
-                                                <h2 style={{color: 'rgb(89, 89, 89)'}}>PROMPT</h2>
-                                            </div>
-                                            <div className='moreAbout'>
-                                                <div>
-                                                    <span>De R$ 9.001,00 a R$ 10.000,00</span>
-                                                    <span style={{fontWeight: 'bold'}}>
-                                                        1 vaga: {' '}
-                                                        <span style={{fontWeight: 'normal'}}>
-                                                            São Paulo - SP (1)
-                                                        </span>
-                                                    </span>
-                                                    <span style={{fontSize: '.9rem'}}>Publicada hoje</span>
-                                                </div>
-                                            </div>
-                                            <div className='description'>
-                                                <p style={{}}>Realizar cotações, negociações e processos de compra com fornecedores de embalagens,
-                                                    materiais operacionais e serviços logísticos;
-                                                    Gerar e acompanhar pedidos de compra (até a…
-                                                </p>
-                                                <span style={{
-                                                    color: 'rgb(37, 87, 167)', 
-                                                    fontWeight: 'bold', fontSize: '.9rem', cursor: 'pointer'}}>
-                                                    continuar lendo
-                                                </span>
-                                            </div>
-                                            <div className='sendApplication'>
-                                                <button>
-                                                    <span>
-                                                        Enviar Candidatura Fácil
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='box-jobs'>
-                                        <div className='aboutJobs'>
-                                            <div className='title'>
-                                                <h1>ANALISTA DE GROWTH SENIOR</h1>
-                                                <h2 style={{color: 'rgb(89, 89, 89)'}}>PROMPT</h2>
-                                            </div>
-                                            <div className='moreAbout'>
-                                                <div>
-                                                    <span>De R$ 9.001,00 a R$ 10.000,00</span>
-                                                    <span style={{fontWeight: 'bold'}}>
-                                                        1 vaga: {' '}
-                                                        <span style={{fontWeight: 'normal'}}>
-                                                            São Paulo - SP (1)
-                                                        </span>
-                                                    </span>
-                                                    <span style={{fontSize: '.9rem'}}>Publicada hoje</span>
-                                                </div>
-                                            </div>
-                                            <div className='description'>
-                                                <p style={{}}>Realizar cotações, negociações e processos de compra com fornecedores de embalagens,
-                                                    materiais operacionais e serviços logísticos;
-                                                    Gerar e acompanhar pedidos de compra (até a…
-                                                </p>
-                                                <span style={{
-                                                    color: 'rgb(37, 87, 167)', 
-                                                    fontWeight: 'bold', fontSize: '.9rem', cursor: 'pointer'}}>
-                                                    continuar lendo
-                                                </span>
-                                            </div>
-                                            <div className='sendApplication'>
-                                                <button>
-                                                    <span>
-                                                        Enviar Candidatura Fácil
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='box-jobs'>
-                                        <div className='aboutJobs'>
-                                            <div className='title'>
-                                                <h1>ANALISTA DE GROWTH SENIOR</h1>
-                                                <h2 style={{color: 'rgb(89, 89, 89)'}}>PROMPT</h2>
-                                            </div>
-                                            <div className='moreAbout'>
-                                                <div>
-                                                    <span>De R$ 9.001,00 a R$ 10.000,00</span>
-                                                    <span style={{fontWeight: 'bold'}}>
-                                                        1 vaga: {' '}
-                                                        <span style={{fontWeight: 'normal'}}>
-                                                            São Paulo - SP (1)
-                                                        </span>
-                                                    </span>
-                                                    <span style={{fontSize: '.9rem'}}>Publicada hoje</span>
-                                                </div>
-                                            </div>
-                                            <div className='description'>
-                                                <p style={{}}>Realizar cotações, negociações e processos de compra com fornecedores de embalagens,
-                                                    materiais operacionais e serviços logísticos;
-                                                    Gerar e acompanhar pedidos de compra (até a…
-                                                </p>
-                                                <span style={{
-                                                    color: 'rgb(37, 87, 167)', 
-                                                    fontWeight: 'bold', fontSize: '.9rem', cursor: 'pointer'}}>
-                                                    continuar lendo
-                                                </span>
-                                            </div>
-                                            <div className='sendApplication'>
-                                                <button>
-                                                    <span>
-                                                        Enviar Candidatura Fácil
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='box-jobs'>
-                                        <div className='aboutJobs'>
-                                            <div className='title'>
-                                                <h1>ANALISTA DE GROWTH SENIOR</h1>
-                                                <h2 style={{color: 'rgb(89, 89, 89)'}}>PROMPT</h2>
-                                            </div>
-                                            <div className='moreAbout'>
-                                                <div>
-                                                    <span>De R$ 9.001,00 a R$ 10.000,00</span>
-                                                    <span style={{fontWeight: 'bold'}}>
-                                                        1 vaga: {' '}
-                                                        <span style={{fontWeight: 'normal'}}>
-                                                            São Paulo - SP (1)
-                                                        </span>
-                                                    </span>
-                                                    <span style={{fontSize: '.9rem'}}>Publicada hoje</span>
-                                                </div>
-                                            </div>
-                                            <div className='description'>
-                                                <p style={{}}>Realizar cotações, negociações e processos de compra com fornecedores de embalagens,
-                                                    materiais operacionais e serviços logísticos;
-                                                    Gerar e acompanhar pedidos de compra (até a…
-                                                </p>
-                                                <span style={{
-                                                    color: 'rgb(37, 87, 167)', 
-                                                    fontWeight: 'bold', fontSize: '.9rem', cursor: 'pointer'}}>
-                                                    continuar lendo
-                                                </span>
-                                            </div>
-                                            <div className='sendApplication'>
-                                                <button>
-                                                    <span>
-                                                        Enviar Candidatura Fácil
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='box-jobs'>
-                                        <div className='aboutJobs'>
-                                            <div className='title'>
-                                                <h1>ANALISTA DE GROWTH SENIOR</h1>
-                                                <h2 style={{color: 'rgb(89, 89, 89)'}}>PROMPT</h2>
-                                            </div>
-                                            <div className='moreAbout'>
-                                                <div>
-                                                    <span>De R$ 9.001,00 a R$ 10.000,00</span>
-                                                    <span style={{fontWeight: 'bold'}}>
-                                                        1 vaga: {' '}
-                                                        <span style={{fontWeight: 'normal'}}>
-                                                            São Paulo - SP (1)
-                                                        </span>
-                                                    </span>
-                                                    <span style={{fontSize: '.9rem'}}>Publicada hoje</span>
-                                                </div>
-                                            </div>
-                                            <div className='description'>
-                                                <p style={{}}>Realizar cotações, negociações e processos de compra com fornecedores de embalagens,
-                                                    materiais operacionais e serviços logísticos;
-                                                    Gerar e acompanhar pedidos de compra (até a…
-                                                </p>
-                                                <span style={{
-                                                    color: 'rgb(37, 87, 167)', 
-                                                    fontWeight: 'bold', fontSize: '.9rem', cursor: 'pointer'}}>
-                                                    continuar lendo
-                                                </span>
-                                            </div>
-                                            <div className='sendApplication'>
-                                                <button>
-                                                    <span>
-                                                        Enviar Candidatura Fácil
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='box-jobs'>
-                                        <div className='aboutJobs'>
-                                            <div className='title'>
-                                                <h1>ANALISTA DE GROWTH SENIOR</h1>
-                                                <h2 style={{color: 'rgb(89, 89, 89)'}}>PROMPT</h2>
-                                            </div>
-                                            <div className='moreAbout'>
-                                                <div>
-                                                    <span>De R$ 9.001,00 a R$ 10.000,00</span>
-                                                    <span style={{fontWeight: 'bold'}}>
-                                                        1 vaga: {' '}
-                                                        <span style={{fontWeight: 'normal'}}>
-                                                            São Paulo - SP (1)
-                                                        </span>
-                                                    </span>
-                                                    <span style={{fontSize: '.9rem'}}>Publicada hoje</span>
-                                                </div>
-                                            </div>
-                                            <div className='description'>
-                                                <p style={{}}>Realizar cotações, negociações e processos de compra com fornecedores de embalagens,
-                                                    materiais operacionais e serviços logísticos;
-                                                    Gerar e acompanhar pedidos de compra (até a…
-                                                </p>
-                                                <span style={{
-                                                    color: 'rgb(37, 87, 167)', 
-                                                    fontWeight: 'bold', fontSize: '.9rem', cursor: 'pointer'}}>
-                                                    continuar lendo
-                                                </span>
-                                            </div>
-                                            <div className='sendApplication'>
-                                                <button>
-                                                    <span>
-                                                        Enviar Candidatura Fácil
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='box-jobs'>
-                                        <div className='aboutJobs'>
-                                            <div className='title'>
-                                                <h1>ANALISTA DE GROWTH SENIOR</h1>
-                                                <h2 style={{color: 'rgb(89, 89, 89)'}}>PROMPT</h2>
-                                            </div>
-                                            <div className='moreAbout'>
-                                                <div>
-                                                    <span>De R$ 9.001,00 a R$ 10.000,00</span>
-                                                    <span style={{fontWeight: 'bold'}}>
-                                                        1 vaga: {' '}
-                                                        <span style={{fontWeight: 'normal'}}>
-                                                            São Paulo - SP (1)
-                                                        </span>
-                                                    </span>
-                                                    <span style={{fontSize: '.9rem'}}>Publicada hoje</span>
-                                                </div>
-                                            </div>
-                                            <div className='description'>
-                                                <p style={{}}>Realizar cotações, negociações e processos de compra com fornecedores de embalagens,
-                                                    materiais operacionais e serviços logísticos;
-                                                    Gerar e acompanhar pedidos de compra (até a…
-                                                </p>
-                                                <span style={{
-                                                    color: 'rgb(37, 87, 167)', 
-                                                    fontWeight: 'bold', fontSize: '.9rem', cursor: 'pointer'}}>
-                                                    continuar lendo
-                                                </span>
-                                            </div>
-                                            <div className='sendApplication'>
-                                                <button>
-                                                    <span>
-                                                        Enviar Candidatura Fácil
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
-            
+
         </>
     )
 

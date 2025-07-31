@@ -1,0 +1,203 @@
+[
+  {
+    "id": 1,
+    "positionOfJob": "ANALISTA DE GROWTH SENIOR",
+    "company": "PROMPT",
+    "salary": "R$ 10.000,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "São Paulo - SP",
+    "dayPosted": "Publicada hoje",
+    "descriptionOfJob": "Realizar cotações, negociações e processos de compra com fornecedores de embalagens, materiais operacionais e serviços logísticos; Gerar e acompanhar pedidos de compra (até a…"
+  },
+  {
+    "id": 2,
+    "positionOfJob": "Assistente Administrativo",
+    "company": "TechWave",
+    "salary": "R$ 4.500,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "Barueri - SP",
+    "dayPosted": "Publicada há 2 dias",
+    "descriptionOfJob": "Controle de documentos, apoio a rotinas administrativas, organização de arquivos e atendimento telefônico."
+  },
+  {
+    "id": 3,
+    "positionOfJob": "Assistente Administrativo",
+    "company": "DataHu",
+    "salary": "R$ 3.800,00",
+    "numbersOfVacancy": "2 vagas",
+    "locationOfCompany": "Barueri - SP",
+    "dayPosted": "Publicada há 1 dia",
+    "descriptionOfJob": "Controle de documentos, apoio a rotinas administrativas, organização de arquivos e atendimento telefônico."
+  },
+  {
+    "id": 4,
+    "positionOfJob": "Designer Gráfico",
+    "company": "Agência Criativa",
+    "salary": "R$ 3.200,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "Barueri - SP",
+    "dayPosted": "Publicada há 3 dias",
+    "descriptionOfJob": "Criação de peças digitais e impressas, tratamento de imagens, identidade visual e apoio à equipe de marketing."
+  },
+  {
+    "id": 5,
+    "positionOfJob": "Analista de Marketing Digital",
+    "company": "MarketBoost",
+    "salary": "R$ 5.000,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "Barueri - SP",
+    "dayPosted": "Publicada ontem",
+    "descriptionOfJob": "Gerenciamento de campanhas em Google Ads e redes sociais, análise de métricas e otimização de resultados."
+  },
+  {
+    "id": 6,
+    "positionOfJob": "Assistente Administrativo",
+    "company": "TransLog",
+    "salary": "R$ 2.200,00",
+    "numbersOfVacancy": "2 vagas",
+    "locationOfCompany": "Barueri - SP",
+    "dayPosted": "Publicada há 4 dias",
+    "descriptionOfJob": "Controle de documentos, apoio a rotinas administrativas, organização de arquivos e atendimento telefônico."
+  },
+  {
+    "id": 7,
+    "positionOfJob": "Analista de Dados",
+    "company": "Insight BI",
+    "salary": "R$ 6.500,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "Barueri - SP",
+    "dayPosted": "Publicada hoje",
+    "descriptionOfJob": "Criação de dashboards, análise de KPIs, geração de relatórios para tomada de decisão estratégica."
+  },
+  {
+    "id": 8,
+    "positionOfJob": "Coordenador de Projetos",
+    "company": "NextProject",
+    "salary": "R$ 7.800,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "Barueri - SP",
+    "dayPosted": "Publicada há 5 dias",
+    "descriptionOfJob": "Planejamento, execução e controle de projetos. Acompanhamento de cronograma, escopo e orçamento."
+  },
+  {
+    "id": 9,
+    "positionOfJob": "Assistente Administrativo",
+    "company": "PeopleTech",
+    "salary": "R$ 4.000,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "Barueri - SP",
+    "dayPosted": "Publicada hoje",
+    "descriptionOfJob": "Realização de pedidos, contato com fornecedores, negociação de preços e prazos, controle de estoque."
+  },
+  {
+    "id": 10,
+    "positionOfJob": "Assistente Administrativo",
+    "company": "MaxStore",
+    "salary": "R$ 2.900,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "Jandira - SP",
+    "dayPosted": "Publicada há 1 dia",
+    "descriptionOfJob": "Realização de pedidos, contato com fornecedores, negociação de preços e prazos, controle de estoque."
+  },
+  {
+    "id": 11,
+    "positionOfJob": "Assistente Administrativo",
+    "company": "Indústria Jandira",
+    "salary": "R$ 3.500,00",
+    "numbersOfVacancy": "3 vagas",
+    "locationOfCompany": "Jandira - SP",
+    "dayPosted": "Publicada há 2 dias",
+    "descriptionOfJob": "Manutenção preventiva e corretiva em equipamentos industriais. Conhecimento em elétrica e mecânica."
+  },
+  {
+    "id": 12,
+    "positionOfJob": "Assistente Administrativo",
+    "company": "ServiAdm",
+    "salary": "R$ 2.700,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "Itapevi - SP",
+    "dayPosted": "Publicada hoje",
+    "descriptionOfJob": "Controle de documentos, apoio a rotinas administrativas, organização de arquivos e atendimento telefônico."
+  },
+  {
+    "id": 13,
+    "positionOfJob": "Assistente Administrativo",
+    "company": "Itapevi Business",
+    "salary": "R$ 2.900,00",
+    "numbersOfVacancy": "4 vagas",
+    "locationOfCompany": "Itapevi - SP",
+    "dayPosted": "Publicada há 3 dias",
+    "descriptionOfJob": "Lançamento de notas fiscais, controle de planilhas, emissão de relatórios e suporte ao financeiro."
+  },
+  {
+    "id": 14,
+    "positionOfJob": "Assistente Administrativo",
+    "company": "SearchNow",
+    "salary": "R$ 5.200,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "Osasco - SP",
+    "dayPosted": "Publicada há 1 dia",
+    "descriptionOfJob": "Otimização de sites para mecanismos de busca, análise de tráfego orgânico, link building e auditoria técnica."
+  },
+  {
+    "id": 15,
+    "positionOfJob": "Assistente Administrativo",
+    "company": "CodeStructure",
+    "salary": "R$ 12.000,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "São Paulo - SP",
+    "dayPosted": "Publicada há 1 semana",
+    "descriptionOfJob": "Definição de arquitetura de sistemas, padrões de projeto e boas práticas de desenvolvimento escalável."
+  },
+  {
+    "id": 16,
+    "positionOfJob": "Product Owner",
+    "company": "AgilizeTech",
+    "salary": "R$ 10.000,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "São Paulo - SP",
+    "dayPosted": "Publicada há 3 dias",
+    "descriptionOfJob": "Gestão de backlog, definição de requisitos com o time de produto, acompanhamento de entregas e prioridades."
+  },
+  {
+    "id": 17,
+    "positionOfJob": "Estagiário de TI",
+    "company": "InovaTech",
+    "salary": "R$ 1.500,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "Carapicuíba - SP",
+    "dayPosted": "Publicada hoje",
+    "descriptionOfJob": "Apoio na manutenção de computadores, instalação de softwares e suporte aos usuários internos."
+  },
+  {
+    "id": 18,
+    "positionOfJob": "Consultor Comercial",
+    "company": "VendasPro",
+    "salary": "R$ 3.700,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "Cotia - SP",
+    "dayPosted": "Publicada há 2 dias",
+    "descriptionOfJob": "Prospecção de novos clientes, apresentação de propostas, acompanhamento de negociações e pós-venda."
+  },
+  {
+    "id": 19,
+    "positionOfJob": "Desenvolvedor Back-end",
+    "company": "CodeMaster",
+    "salary": "R$ 6.800,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "São Paulo - SP",
+    "dayPosted": "Publicada há 4 dias",
+    "descriptionOfJob": "Criação de APIs RESTful, integração com banco de dados e manutenção de sistemas legados em Java e Node.js."
+  },
+  {
+    "id": 20,
+    "positionOfJob": "Assistente Administrativo",
+    "company": "ProntoAtende",
+    "salary": "R$ 2.100,00",
+    "numbersOfVacancy": "1 vaga",
+    "locationOfCompany": "Santana de Parnaíba - SP",
+    "dayPosted": "Publicada ontem",
+    "descriptionOfJob": "Organização de documentos, controle de agenda e atendimento a clientes internos e externos."
+  }
+]
+
