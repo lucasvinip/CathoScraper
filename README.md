@@ -25,3 +25,9 @@ Este projeto possui duas partes principais:
    - Aplica delays entre candidaturas para simular comportamento humano.
 
 ---
+
+## Demonstração
+
+Confira o vídeo demonstrativo do projeto em ação:
+
+[![Vídeo de Demonstração](https://img.youtube.com/vi/SEU_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=SEU_VIDEO_ID)
