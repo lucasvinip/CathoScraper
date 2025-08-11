@@ -12,10 +12,11 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\Scraper\\src\\index.ts",
+            "program": "${workspaceFolder}\\Scraper\\dist\\index.js",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
-            ]
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }

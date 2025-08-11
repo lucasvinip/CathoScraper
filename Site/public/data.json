@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "positionOfJob": "Assistente Administrativo",
+    "positionOfJob": "Desenvolvedor Junior",
     "company": "TechWave",
     "salary": "R$ 4.500,00",
     "numbersOfVacancy": "1 vaga",
@@ -21,7 +21,7 @@
   },
   {
     "id": 3,
-    "positionOfJob": "Assistente Administrativo",
+    "positionOfJob": "Desenvolvedor Junior",
     "company": "DataHu",
     "salary": "R$ 3.800,00",
     "numbersOfVacancy": "2 vagas",
@@ -51,7 +51,7 @@
   },
   {
     "id": 6,
-    "positionOfJob": "Assistente Administrativo",
+    "positionOfJob": "Estagiário de TI",
     "company": "TransLog",
     "salary": "R$ 2.200,00",
     "numbersOfVacancy": "2 vagas",
@@ -81,7 +81,7 @@
   },
   {
     "id": 9,
-    "positionOfJob": "Assistente Administrativo",
+    "positionOfJob": "Desenvolvedor Junior",
     "company": "PeopleTech",
     "salary": "R$ 4.000,00",
     "numbersOfVacancy": "1 vaga",
@@ -101,7 +101,7 @@
   },
   {
     "id": 11,
-    "positionOfJob": "Assistente Administrativo",
+    "positionOfJob": "Desenvolvedor Junior",
     "company": "Indústria Jandira",
     "salary": "R$ 3.500,00",
     "numbersOfVacancy": "3 vagas",
@@ -111,7 +111,7 @@
   },
   {
     "id": 12,
-    "positionOfJob": "Assistente Administrativo",
+    "positionOfJob": "Estagiário de TI",
     "company": "ServiAdm",
     "salary": "R$ 2.700,00",
     "numbersOfVacancy": "1 vaga",
@@ -121,7 +121,7 @@
   },
   {
     "id": 13,
-    "positionOfJob": "Assistente Administrativo",
+    "positionOfJob": "Desenvolvedor Junior",
     "company": "Itapevi Business",
     "salary": "R$ 2.900,00",
     "numbersOfVacancy": "4 vagas",
@@ -131,7 +131,7 @@
   },
   {
     "id": 14,
-    "positionOfJob": "Assistente Administrativo",
+    "positionOfJob": "Estagiário de TI",
     "company": "SearchNow",
     "salary": "R$ 5.200,00",
     "numbersOfVacancy": "1 vaga",
@@ -141,7 +141,7 @@
   },
   {
     "id": 15,
-    "positionOfJob": "Assistente Administrativo",
+    "positionOfJob": "Desenvolvedor Junior",
     "company": "CodeStructure",
     "salary": "R$ 12.000,00",
     "numbersOfVacancy": "1 vaga",
@@ -181,11 +181,11 @@
   },
   {
     "id": 19,
-    "positionOfJob": "Desenvolvedor Back-end",
+    "positionOfJob": "Desenvolvedor Junior",
     "company": "CodeMaster",
     "salary": "R$ 6.800,00",
     "numbersOfVacancy": "1 vaga",
-    "locationOfCompany": "São Paulo - SP",
+    "locationOfCompany": "Jandira - SP",
     "dayPosted": "Publicada há 4 dias",
     "descriptionOfJob": "Criação de APIs RESTful, integração com banco de dados e manutenção de sistemas legados em Java e Node.js."
   },

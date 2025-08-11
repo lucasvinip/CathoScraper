@@ -2,47 +2,41 @@ const puppeteer = require('puppeteer');
 
 const url = 'http://localhost:5173';
 
-// const main = async () =>{
-
-// }
-
 async function main() {
     const browser = await puppeteer.launch({
         headless: false,
         defaultViewport: null,
+        args: ['--start-maximized']
     });
-     //args: ['--start-maximized']
+    //args: ['--start-maximized']
 
     const page = await browser.newPage();
     await page.goto(url);
 
-    console.log('antes do evaluate');
+    const boxJobs = await page.$$('.box-jobs');
+    const desireJobTitle = ['DESENVOLVEDOR JUNIOR', 'ESTAGIÁRIO DE TI'];
+    const desireCities = ['Barueri - SP', 'Jandira - SP', 'Carapicuíba - SP', 'Osasco - SP', 'Itapevi - SP'];
 
-    await page.evaluate(async () => {
-        const distance = 100;
-        let scrolledAmount = 0;
+    const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-        return new Promise<void>(resolve => {
-            const timer = setInterval(() => {
-                window.scrollBy(0, distance);
-                scrolledAmount += distance;
+    for (const job of boxJobs) {
+        const title = await job.$eval('.title h1', (el: HTMLElement) => el.textContent?.trim() || '');
+        const city = await job.$eval('.moreAbout div span span', (el: HTMLElement) => el.textContent?.trim() || '');
 
-                if (scrolledAmount >= document.body.scrollHeight) {
-                    clearInterval(timer);
-                    resolve();
-                }
-            }, 100);
-        })
-    });
-    console.log('depois do evaluate');
-    
-    // const element = await page.waitForSelector('div > .sendApplication > button');
-    // if (element) {
-    //     const text = await element.evaluate((el: HTMLButtonElement) => el.textContent, element);
-    //     console.log('encontrado', text);
+        const matchTitle = desireJobTitle.includes(title);
+        const matchCity = desireCities.includes(city);
 
-    // }
+        if (matchTitle && matchCity) {
+            const botao = await job.$('.sendApplication button');
+            if (botao) {
+                await botao.click();
+                await delay(500);
+            }
+        }
+    }
 
+    await delay(10000);
+    await browser.close();
 }
 
 main();

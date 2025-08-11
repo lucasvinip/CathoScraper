@@ -22,7 +22,7 @@ function Jobs() {
 
     useEffect(() => {
         const getVacancy = async () => {
-            const response = await fetch('./public/data.json');
+            const response = await fetch('/data.json');
             const data: Job [] = await response.json();
             setJobs(data);
         }
@@ -145,7 +145,7 @@ function Jobs() {
                                         Vagas de emprego no Brasil
                                     </span>
                                     <span>
-                                        627.615 resultados
+                                        {jobs.length} resultados
                                     </span>
                                     <div>
                                         <span style={{
