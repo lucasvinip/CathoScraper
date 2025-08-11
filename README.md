@@ -1,4 +1,4 @@
-# Job Application Automation
+# CathoScraper
 
 Projeto que automatiza a busca e candidatura em vagas de emprego específicas, combinando uma landing page simples em React com TypeScript e um bot backend em Node.js com TypeScript e Puppeteer.
 
