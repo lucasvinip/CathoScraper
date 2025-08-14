@@ -40,3 +40,48 @@ async function main() {
 }
 
 main();
+
+// teste com outros looping, aprenzidado
+
+////////////////////////FOR////////////////////////////////
+// for (let i = 0; i < boxJobs.length; i++) {
+    //     const job: ElementHandle = boxJobs[i];
+    //     console.log(i);
+
+    //     const title: string = await job.$eval('.title h1', (el: HTMLElement) => el.textContent?.trim() || '');
+    //     const city: string = await job.$eval('.moreAbout div span span', (el: HTMLElement) => el.textContent?.trim() || '');
+
+    //     const matchTitle = desireJobTitle.includes(title);
+    //     const matchCity = desireCities.includes(city);
+
+    //     if (matchTitle && matchCity) {
+    //         const botao = await job.$('.sendApplication button');
+    //         if (botao) {
+    //             await botao.click();
+    //             await delay(700);
+    //         }
+    //     }
+    // }
+////////////////////////FOR////////////////////////////////
+
+////////////////////////WHILE////////////////////////////////
+    // let i = 0;
+    // while (i < boxJobs.length) {
+    //     const job: ElementHandle = boxJobs[i];
+
+    //     const title: string = await job.$eval('.title h1', (el: HTMLElement) => el.textContent?.trim() || '');
+    //     const city: string = await job.$eval('.moreAbout div span span', (el: HTMLElement) => el.textContent?.trim() || '');
+
+    //     const matchTitle = desireJobTitle.includes(title);
+    //     const matchCity = desireCities.includes(city);
+
+    //     if (matchTitle && matchCity) {
+    //         const botao = await job.$('.sendApplication button');
+    //         if (botao) {
+    //             await botao.click();
+    //             await delay(700);
+    //         }
+    //     }
+    //     i++;
+    // }
+////////////////////////WHILE////////////////////////////////
