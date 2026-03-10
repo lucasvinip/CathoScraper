@@ -1,33 +1,50 @@
 # CathoScraper
 
-Projeto que automatiza a busca e candidatura em vagas de emprego específicas, combinando uma landing page simples em React com TypeScript e um bot backend em Node.js com TypeScript e Puppeteer.
+Aplicação que automatiza a busca e candidatura em vagas de emprego no site Catho utilizando um bot controlado por Puppeteer.
 
----
+O sistema permite configurar filtros de vagas e executar candidaturas automaticamente, simulando comportamento humano para reduzir risco de bloqueio.
+
+## Arquitetura
+
+Frontend
+React + TypeScript
+
+Interface simples para iniciar o processo de automação.
+
+Backend
+Node.js + TypeScript + Puppeteer
+
+Responsável por:
+
+- acessar o site da Catho
+- aplicar filtros de busca
+- coletar vagas disponíveis
+- executar candidaturas automaticamente
+- aplicar delays entre ações
 
 ## Tecnologias
 
-- **Frontend:** React + TypeScript 
-- **Backend:** Node.js + TypeScript + Puppeteer  
+Frontend
+React
+TypeScript
 
----
+Backend
+Node.js
+TypeScript
+Puppeteer
 
-## Descrição
+## Como executar
 
-Este projeto possui duas partes principais:
+git clone https://github.com/lucasvinip/CathoScraper
 
-1. **Frontend (landing page):**  
-   - Desenvolvido em React com TypeScript.  
-   - Página simples, inspirada no layout do site da Catho.
+cd CathoScraper
 
-2. **Backend (bot):**  
-   - Desenvolvido em Node.js com TypeScript.  
-   - Utiliza Puppeteer para realizar candidaturas automáticas com base em filtros pré-configurados.  
-   - Aplica delays entre candidaturas para simular comportamento humano.
+npm install
 
----
+npm run start
 
 ## Demonstração
 
-Confira o vídeo demonstrativo do projeto em ação:
+Vídeo demonstrando o funcionamento do bot:
 
-[![Vídeo de Demonstração](https://img.youtube.com/vi/SEU_VIDEO_ID/maxresdefault.jpg)](https://www.linkedin.com/feed/update/urn:li:activity:7360973326803984384/)
+(link)
