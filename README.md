@@ -47,4 +47,4 @@ npm run start
 
 Vídeo demonstrando o funcionamento do bot:
 
-(link)
+[![Vídeo de Demonstração](https://img.youtube.com/vi/SEU_VIDEO_ID/maxresdefault.jpg)](https://www.linkedin.com/feed/update/urn:li:activity:7360973326803984384/)
