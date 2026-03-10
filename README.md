@@ -1,6 +1,6 @@
 # CathoScraper
 
-Aplicação que automatiza a busca e candidatura em vagas de emprego no site Catho utilizando um bot controlado por Puppeteer.
+Aplicação que automatiza a busca e candidatura em vagas de emprego com uma landing page simples, que simula o site da Catho, utilizando um bot controlado por Puppeteer.
 
 O sistema permite configurar filtros de vagas e executar candidaturas automaticamente, simulando comportamento humano para reduzir risco de bloqueio.
 
